@@ -61,8 +61,8 @@ export default {
             type: "select",
             options: [
               {
-                key: "Jonsson",
-                value: "Jonsson",
+                key: "jonsson",
+                value: "jonsson",
                 metadatas: {
                   intlLabel: {
                     id: "ckeditor.preset.jonsson.label",
