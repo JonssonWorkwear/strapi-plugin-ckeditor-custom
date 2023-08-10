@@ -3,6 +3,7 @@
   "ckeditor.description": "The rich text editor for every use case",
   "ckeditor.preset.label": "Choose editor version",
   "ckeditor.preset.description": "Do you need more or less features?",
+  "ckeditor.preset.jonsson.label": "Jonsson version",
   "ckeditor.preset.light.label": "Light version",
   "ckeditor.preset.standard.label": "Standard version",
   "ckeditor.settings": "Settings",
