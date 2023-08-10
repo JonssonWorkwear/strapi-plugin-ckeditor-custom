@@ -531,6 +531,8 @@ export default class Configurator {
     const presetName = this.fieldConfig.options.preset;
 
     switch (presetName) {
+      case "jonsson":
+        return CKEDITOR_BASE_CONFIG_FOR_PRESETS.light;
       case "light":
         return CKEDITOR_BASE_CONFIG_FOR_PRESETS.light;
       case "standard":
