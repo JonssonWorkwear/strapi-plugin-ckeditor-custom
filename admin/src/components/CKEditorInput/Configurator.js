@@ -532,7 +532,7 @@ export default class Configurator {
 
     switch (presetName) {
       case "jonsson":
-        return CKEDITOR_BASE_CONFIG_FOR_PRESETS.light;
+        return CKEDITOR_BASE_CONFIG_FOR_PRESETS.jonsson;
       case "light":
         return CKEDITOR_BASE_CONFIG_FOR_PRESETS.light;
       case "standard":
