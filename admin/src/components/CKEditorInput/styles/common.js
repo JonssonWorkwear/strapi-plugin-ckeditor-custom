@@ -12,6 +12,7 @@ export const style = css`
 
     padding-block: 0.2rem;
     padding: 16px;
+    margin-top: -4px;
 
     font-size: 0.75rem;
 
@@ -33,12 +34,9 @@ export const style = css`
     border-width: 1px;
     border-color: rgb(220, 220, 228);
     border-style: solid;
+    border-bottom: 0;
 
     background: rgb(246, 246, 249);
-
-    .ck-toolbar__items {
-      color: rgb(102, 102, 135);
-    }
   }
 
   .ck-editor__main {
