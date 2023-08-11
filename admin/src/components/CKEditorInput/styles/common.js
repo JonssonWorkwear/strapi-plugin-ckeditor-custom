@@ -9,19 +9,6 @@ export const style = css`
     font-size: 0.875rem;
   }
 
-  .ck.ck-editor {
-    border-radius: 4px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(220, 220, 228);
-  }
-
-  .ck.ck-toolbar {
-    border: 0;
-    border-radius: 4px;
-    background: rgb(246, 246, 249);
-  }
-
   .ck-editor__main {
     --ck-font-face: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
       Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -115,6 +102,19 @@ export const style = css`
       min-height: 12.5rem;
       border-bottom-left-radius: 0.25rem;
       border-bottom-right-radius: 0.25rem;
+    }
+
+    .ck.ck-editor {
+      border-radius: 4px;
+      border-style: solid;
+      border-width: 1px;
+      border-color: rgb(220, 220, 228);
+    }
+
+    .ck.ck-toolbar {
+      border: 0;
+      border-radius: 4px;
+      background: rgb(246, 246, 249);
     }
   }
 `;
