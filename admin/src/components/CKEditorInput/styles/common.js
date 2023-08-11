@@ -9,11 +9,25 @@ export const style = css`
     font-size: 0.875rem;
   }
 
+  .ck.ck-editor {
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(220, 220, 228);
+  }
+
+  .ck.ck-toolbar {
+    border: 0;
+    border-radius: 4px;
+    background: rgb(246, 246, 249);
+  }
+
   .ck-editor__main {
     --ck-font-face: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
       Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     color: var(--ck-color-editor-base-text);
     font-family: var(--ck-font-face);
+    border: 0;
 
     * {
       font: revert;
@@ -101,16 +115,6 @@ export const style = css`
       min-height: 12.5rem;
       border-bottom-left-radius: 0.25rem;
       border-bottom-right-radius: 0.25rem;
-
-      // so it's more Strapi alike
-      &.ck-focused:not(.ck-editor__nested-editable) {
-        border: 1px solid rgb(73, 69, 255);
-        box-shadow: rgb(73 69 255) 0 0 0 0.125rem;
-        border-top-left-radius: 0.25rem;
-        border-top-right-radius: 0.25rem;
-        transition-property: border-color, box-shadow;
-        transition-duration: 0.2s;
-      }
     }
   }
 `;
