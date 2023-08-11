@@ -11,14 +11,14 @@ export const style = css`
 
     font-size: 0.75rem;
 
-    border-radius: 4px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-
-    border-top: 0;
     border-width: 1px;
     border-color: rgb(220, 220, 228);
     border-style: solid;
+    border-radius: 4px;
+
+    border-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 
     background: rgb(246, 246, 249);
     color: rgb(102, 102, 135);
@@ -115,8 +115,14 @@ export const style = css`
     .ck.ck-content.ck-editor__editable {
       line-height: initial;
       min-height: 12.5rem;
-      border-bottom-left-radius: 0.25rem;
-      border-bottom-right-radius: 0.25rem;
+
+      border-width: 1px;
+      border-color: rgb(220, 220, 228);
+      border-style: solid;
+
+      border-top: 0;
+      border-bottom: 0;
+      border-radius: 0;
     }
   }
 `;
