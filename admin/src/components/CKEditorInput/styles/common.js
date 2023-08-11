@@ -80,6 +80,7 @@ export const style = css`
     ol {
       list-style: initial;
       margin-left: 2rem;
+      font-size: 0.875rem;
     }
 
     ol {
