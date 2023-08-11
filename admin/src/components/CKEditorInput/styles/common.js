@@ -1,6 +1,10 @@
 import { css } from "styled-components";
 
 export const style = css`
+  .ck {
+    --ck-border-radius: 4px;
+  }
+
   .ck-word-count {
     display: flex;
     gap: 0.5rem;
@@ -29,7 +33,6 @@ export const style = css`
     border-width: 1px;
     border-color: rgb(220, 220, 228);
     border-style: solid;
-    border-radius: 4px;
 
     background: rgb(246, 246, 249);
     color: rgb(102, 102, 135);
