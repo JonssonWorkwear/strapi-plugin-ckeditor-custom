@@ -5,8 +5,23 @@ export const style = css`
     display: flex;
     gap: 0.5rem;
     justify-content: flex-end;
+
     padding-block: 0.2rem;
-    font-size: 0.875rem;
+    padding: 16px;
+
+    font-size: 0.75rem;
+
+    border-radius: 4px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    border-top: 0;
+    border-width: 1px;
+    border-color: rgb(220, 220, 228);
+    border-style: solid;
+
+    background: rgb(246, 246, 249);
+    color: rgb(102, 102, 135);
   }
 
   .ck-editor__main {
@@ -102,19 +117,6 @@ export const style = css`
       min-height: 12.5rem;
       border-bottom-left-radius: 0.25rem;
       border-bottom-right-radius: 0.25rem;
-    }
-
-    .ck.ck-editor {
-      border-radius: 4px;
-      border-style: solid;
-      border-width: 1px;
-      border-color: rgb(220, 220, 228);
-    }
-
-    .ck.ck-toolbar {
-      border: 0;
-      border-radius: 4px;
-      background: rgb(246, 246, 249);
     }
   }
 `;
