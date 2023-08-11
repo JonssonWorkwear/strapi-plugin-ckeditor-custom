@@ -24,6 +24,17 @@ export const style = css`
     color: rgb(102, 102, 135);
   }
 
+  .ck-rounded-corners .ck.ck-editor__top .ck-sticky-panel .ck-toolbar,
+  .ck.ck-editor__top .ck-sticky-panel .ck-toolbar.ck-rounded-corners {
+    border-width: 1px;
+    border-color: rgb(220, 220, 228);
+    border-style: solid;
+    border-radius: 4px;
+
+    background: rgb(246, 246, 249);
+    color: rgb(102, 102, 135);
+  }
+
   .ck-editor__main {
     --ck-font-face: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
       Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
