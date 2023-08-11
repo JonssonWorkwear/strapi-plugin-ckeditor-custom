@@ -35,7 +35,10 @@ export const style = css`
     border-style: solid;
 
     background: rgb(246, 246, 249);
-    color: rgb(102, 102, 135);
+
+    .ck-toolbar__items {
+      color: rgb(102, 102, 135);
+    }
   }
 
   .ck-editor__main {
