@@ -112,7 +112,7 @@ export const style = css`
     }
 
     // higher specificity needed
-    .ck.ck-content.ck-editor__editable {
+    &.ck-editor__editable:not(.ck-focused) { {
       line-height: initial;
       min-height: 12.5rem;
 
