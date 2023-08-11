@@ -10,7 +10,8 @@ export const style = css`
   }
 
   .ck-editor__main {
-    --ck-font-face: "Source Sans Pro", system-ui, Roboto, "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    --ck-font-face: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     color: var(--ck-color-editor-base-text);
     font-family: var(--ck-font-face);
 
@@ -22,29 +23,29 @@ export const style = css`
     h1 {
       font-size: 2em;
       margin-bottom: 0.6em;
-      font-weight: 400;
+      font-weight: 600;
     }
 
     h2 {
       font-size: 1.68em;
       margin-bottom: 0.4em;
-      font-weight: 400;
+      font-weight: 600;
     }
 
     h3 {
       font-size: 1.36em;
       margin-bottom: 0.2em;
-      font-weight: 400;
+      font-weight: 600;
     }
 
     h4 {
       font-size: 1.15em;
       margin-bottom: 0.1em;
-      font-weight: 400;
+      font-weight: 600;
     }
 
     p {
-      font-size: 1em;
+      font-size: 0.875rem;
       line-height: 1.6em;
       margin-bottom: 0.8em;
     }
@@ -54,7 +55,7 @@ export const style = css`
       caption-side: bottom;
       color: var(--ck-color-image-caption-text);
       display: table-caption;
-      font-size: .75em;
+      font-size: 0.75em;
       outline-offset: -1px;
       padding: 0.6em;
       word-break: break-word;
@@ -86,11 +87,11 @@ export const style = css`
     }
 
     sub {
-      vertical-align: sub
+      vertical-align: sub;
     }
 
     sup {
-      vertical-align: super
+      vertical-align: super;
     }
 
     // higher specificity needed
