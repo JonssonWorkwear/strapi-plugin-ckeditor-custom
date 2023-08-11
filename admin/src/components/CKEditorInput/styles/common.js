@@ -138,6 +138,16 @@ export const style = css`
       border-top: 0;
       border-bottom: 0;
       border-radius: 0;
+
+      &.ck-focused:not(.ck-editor__nested-editable) {
+        border-width: 1px;
+        border-color: rgb(220, 220, 228);
+        border-style: solid;
+
+        border-top: 0;
+        border-bottom: 0;
+        border-radius: 0;
+      }
     }
   }
 `;
