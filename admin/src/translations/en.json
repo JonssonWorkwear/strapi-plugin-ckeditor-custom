@@ -1,6 +1,6 @@
 {
-  "ckeditor.label": "CKEditor",
-  "ckeditor.description": "The rich text editor for every use case",
+  "ckeditor.label": "Rich text editor",
+  "ckeditor.description": "The CKEditor 5 rich text editor for Jonsson",
   "ckeditor.preset.label": "Choose editor version",
   "ckeditor.preset.description": "Do you need more or less features?",
   "ckeditor.preset.jonsson.label": "Jonsson version",

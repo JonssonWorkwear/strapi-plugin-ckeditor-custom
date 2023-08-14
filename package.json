@@ -4,9 +4,9 @@
   "description": "CKEditor 5 custom field for Strapi.",
   "strapi": {
     "name": "ckeditor",
-    "description": "The rich text editor for every use case",
+    "description": "The CKEditor 5 rich text editor for Jonsson",
     "kind": "plugin",
-    "displayName": "CKEditor"
+    "displayName": "Rich text editor"
   },
   "keywords": [
     "strapi",

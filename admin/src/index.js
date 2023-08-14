@@ -37,11 +37,11 @@ export default {
       },
       intlLabel: {
         id: "ckeditor.label",
-        defaultMessage: "CKEditor",
+        defaultMessage: "Rich text editor",
       },
       intlDescription: {
         id: "ckeditor.description",
-        defaultMessage: "The rich text editor for every use case",
+        defaultMessage: "The CKEditor 5 rich text editor for Jonsson",
       },
       components: {
         Input: async () => import("./components/CKEditorInput"),
@@ -53,12 +53,10 @@ export default {
               id: "ckeditor.preset.label",
               defaultMessage: "Choose editor version",
             },
-            description: {
-              id: "ckeditor.preset.description",
-              defaultMessage: "Do you need more or less features?",
-            },
             name: "options.preset",
             type: "select",
+            defaultValue: "jonsson",
+            value: "jonsson",
             options: [
               {
                 key: "jonsson",
@@ -107,14 +105,10 @@ export default {
               id: "ckeditor.output.label",
               defaultMessage: "Choose output type",
             },
-            description: {
-              id: "ckeditor.output.description",
-              defaultMessage:
-                "Decide, whether you want to get your output in HTML or Markdown",
-            },
             name: "options.output",
             type: "select",
-            defaultValue: "HTML",
+            defaultValue: "Markdown",
+            value: "Markdown",
             options: [
               {
                 key: "html",
