@@ -152,6 +152,7 @@ export const style = css`
       border-radius: 0;
 
       min-height: 12.5rem;
+      box-shadow: none;
     }
   }
 `;
