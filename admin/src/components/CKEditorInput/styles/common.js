@@ -3,6 +3,10 @@ import { css } from "styled-components";
 export const style = css`
   .ck {
     --ck-border-radius: 4px;
+    --ck-border-width: 1px;
+    --ck-border-color: rgb(220, 220, 228);
+
+    --ck-color-gray-background: rgb(246, 246, 249);
   }
 
   .ck-word-count {
@@ -14,10 +18,10 @@ export const style = css`
     padding: 16px;
     margin-top: -4px;
 
-    font-size: 0.75rem;
+    font-size: 0.875rem;
 
-    border-width: 1px;
-    border-color: rgb(220, 220, 228);
+    border-width: var(--ck-border-width);
+    border-color: var(--ck-border-color);
     border-style: solid;
     border-radius: 4px;
 
@@ -25,18 +29,18 @@ export const style = css`
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 
-    background: rgb(246, 246, 249);
+    background: var(--ck-color-gray-background);
     color: rgb(102, 102, 135);
   }
 
   .ck-rounded-corners .ck.ck-editor__top .ck-sticky-panel .ck-toolbar,
   .ck.ck-editor__top .ck-sticky-panel .ck-toolbar.ck-rounded-corners {
-    border-width: 1px;
-    border-color: rgb(220, 220, 228);
+    border-width: var(--ck-border-width);
+    border-color: var(--ck-border-color);
     border-style: solid;
     border-bottom: 0;
 
-    background: rgb(246, 246, 249);
+    background: var(--ck-color-gray-background);
   }
 
   .ck-editor__main {
@@ -131,8 +135,8 @@ export const style = css`
       line-height: initial;
       min-height: 12.5rem;
 
-      border-width: 1px;
-      border-color: rgb(220, 220, 228);
+      border-width: var(--ck-border-width);
+      border-color: var(--ck-border-color);
       border-style: solid;
 
       border-top: 0;
@@ -143,8 +147,8 @@ export const style = css`
     .ck.ck-content.ck-editor__editable.ck-focused:not(
         .ck-editor__nested-editable
       ) {
-      border-width: 1px;
-      border-color: rgb(220, 220, 228);
+      border-width: var(--ck-border-width);
+      border-color: var(--ck-border-color);
       border-style: solid;
 
       border-top: 0;
