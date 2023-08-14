@@ -153,6 +153,7 @@ export const style = css`
 
       min-height: 12.5rem;
       box-shadow: none;
+      line-height: initial;
     }
   }
 `;
