@@ -150,6 +150,8 @@ export const style = css`
       border-top: 0;
       border-bottom: 0;
       border-radius: 0;
+
+      min-height: 12.5rem;
     }
   }
 `;
