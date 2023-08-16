@@ -1,102 +1,90 @@
-# CKEditor 5 custom field for Strapi
+# Rich text editor custom field (CKEditor 5)
 
-<img src="https://user-images.githubusercontent.com/156149/192792402-4bb1e040-6f8c-49be-af90-fd35fd3a4c66.png" alt="CKEditor 5 used inside Strapi. Article form consisting of a title, excerpt text, and content">
+![Rich text editor custom field preview. Features paragraphs, headins, lists, and links.](https://github.com/JonssonWorkwear/strapi-plugin-ckeditor-custom/assets/22895284/b5712bb4-bef9-4a88-ad9b-b4e267a3ebcb)
 
-This package provides a custom field for Strapi that lets you use and configure CKEditor in no time.
+This package provides a custom field for Strapi that lets us use and configure CKEditor. This is forked from the official plugin, provided by the [CKEditor team](https://ckeditor.com). It has been edited to support only paragraphs, headings, links, and lists. It has also been re-designed a bit to match the Strapi feeling. 
 
-Custom fields are supported since Strapi 4.4+ and offer powerful API to create highly customizable fields.
+## ✨ Features
 
-This is an official plugin, provided to you by the [CKEditor team](https://ckeditor.com) 👋
-
-## <a id="features"></a>✨ Features
-
-* **No code field customization:** customize each field for its specific usage scenario – let it be short note, blog article, or a document.
-* **Predefined editor presets:** a couple predefined editor presets (sets of CKEditor 5 plugins and their configuration) to choose from.
-* **Custom max length validation:** Twitter-like length validation with visual indicators, based on the number of characters in the text, not the HTML string.
+* **Predefined editor preset:** no configuration needed to support the paragraphs, headings, links, and lists.
+* **Output selection:** supports both markdown and HTML outputs.
+* **Custom max length validation:** length validation with visual indicators, based on the number of characters in the text.
 * **Dark mode support:** because you like it.
-* **Media library integration:** inserting images directly from Strapi's media library.
-* **More features coming soon:** upload adapter integration, more granular editor toolbar and plugins configuration, and more.
 
-## <a id="installation"></a>🔧 Installation
+## 🔧 Installation
 
-Inside your Strapi app, add the package:
-
-With `npm`:
-
-```bash
-npm install @ckeditor/strapi-plugin-ckeditor
-```
-
-With `yarn`:
-
-```bash
-yarn add @ckeditor/strapi-plugin-ckeditor
-```
-
-Then run build:
-
-```bash
-npm run build
-```
-
-or:
-
-```bash
-yarn build
-```
-
-## <a id="contributing"></a>🛠 Contributing
-
-This section covers the way how to configure your environment if you want to contribute to this package.
-
-### Setting up the environment
-
-In order to start making changes in the plugin you first need to install Strapi infrastructure on top of the plugin repository.
+Clone this repository in the Strapi directory.
 
 ```
-npx create-strapi-app --quickstart strapi
-cd strapi
+git clone https://github.com/JonssonWorkwear/strapi-plugin-ckeditor-custom.git --branch jonsson-theme src/plugins/strapi-plugin-ckeditor-custom
 ```
 
-By default Strapi does not create plugins folder so we need to create it.
+Add the plugin to the git submodules, inside `.gitmodules` file, so we can fetch its content after cloning.
 
 ```
-mkdir -p src/plugins
+[submodule "src/plugins/strapi-plugin-ckeditor-custom"] 
+  path = src/plugins/strapi-plugin-ckeditor-custom
+  url = https://github.com/JonssonWorkwear/strapi-plugin-ckeditor-custom.git
+  branch = jonsson-theme
 ```
 
-Now we should clone this repository so we can work on it.
+Add the plugin to the yarn workspace, inside `./package.json` file, so we won't need to use `yarn` inside plugin itself.
 
 ```
-git clone git@github.com:ckeditor/strapi-plugin-ckeditor.git src/plugins/strapi-plugin-ckeditor
+"workspaces": ["./src/plugins/strapi-plugin-ckeditor-custom"]
 ```
 
-Let's add an entry inside `./package.json` file so, we won't need to use `yarn` inside plugin itself.
+Install dependencies.
 
 ```
-"workspaces": ["./src/plugins/strapi-plugin-ckeditor"]
+yarn
 ```
 
-Install dependencies:
-
-```
-yarn install
-```
-
-Now we need to register plugin so strapi can use it. In order to do that we need
-to create (if not already created) `./config/plugins.js` file and add entry to it.
+Register the plugin so Strapi can use it. Inside `./config/plugins.js` file add an entry to it.
 
 ```
 module.exports = ({ env }) => ({
   ckeditor: {
     enabled: true,
-    resolve: "./src/plugins/strapi-plugin-ckeditor"
+    resolve: "./src/plugins/strapi-plugin-ckeditor-custom"
   },
 });
 ```
 
-Rebuild the project and start the server:
+Rebuild the project and start the server.
 
 ```
 yarn build
 yarn develop
 ```
+
+## 🪛 Development
+
+In order to edit this plugin, make changes inside the plugin directory `./src/plugins/strapi-plugin-ckeditor-custom`.
+
+Rebuild the project and start the server.
+
+```
+yarn build
+yarn develop
+```
+
+Or perhaps use the `--watch-admin` flag to toggle hot reloading of the admin panel.
+
+```
+yarn develop --watch-admin
+```
+
+All the changes are commited and pushed to _this_ repository, independently from the Strapi directory. If you are cloning again (or deploying) the Strapi project cotaining this plugin, make sure to fetch the content of the submodules.
+
+```
+git submodule update --init --recursive
+```
+
+## 📝 Usage
+
+The plugin is made to be used instead of Strapi's default **Rich text field**. 
+
+When adding a new field to a content type, select **CUSTOM** (instead of **DEAFULT**), then select **Rich text editor**.
+
+![Rich text editor custom field preview inside the content type builder](https://github.com/JonssonWorkwear/strapi-plugin-ckeditor-custom/assets/22895284/45853b80-0aae-4f9a-ab3d-8c20cebba738)
