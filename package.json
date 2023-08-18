@@ -8,20 +8,6 @@
     "kind": "plugin",
     "displayName": "Rich text editor"
   },
-  "publishConfig": {
-    "access": "public"
-  },
-  "release": {
-    "branches": [
-      "release"
-    ],
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/npm",
-      "@semantic-release/github"
-    ]
-  },
   "keywords": [
     "strapi",
     "ckeditor",
@@ -79,6 +65,20 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ckeditor/strapi-plugin-ckeditor.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "release": {
+    "branches": [
+      "release"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ]
   },
   "author": "CKSource (http://cksource.com/)",
   "homepage": "https://market.strapi.io/plugins/@ckeditor-strapi-plugin-ckeditor",
