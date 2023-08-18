@@ -1,12 +1,26 @@
 {
-  "name": "@ckeditor/strapi-plugin-ckeditor",
-  "version": "0.0.7",
+  "name": "@jonssonworkwear/strapi-plugin-ckeditor-custom",
+  "version": "1.0.0",
   "description": "CKEditor 5 custom field for Strapi.",
   "strapi": {
     "name": "ckeditor",
     "description": "The CKEditor 5 rich text editor for Jonsson",
     "kind": "plugin",
     "displayName": "Rich text editor"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "release": {
+    "branches": [
+      "release"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ]
   },
   "keywords": [
     "strapi",
