@@ -45,7 +45,7 @@
     "ckeditor5": "^36.0.0"
   },
   "peerDependencies": {
-    "@strapi/strapi": "^4.4.0"
+    "@strapi/strapi": "^4.12.5"
   },
   "repository": {
     "type": "git",
