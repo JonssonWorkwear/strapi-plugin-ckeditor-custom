@@ -21,6 +21,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+      - run: cat package.json
       - name: Create semantic release and publish
         run: npx semantic-release
         env:
