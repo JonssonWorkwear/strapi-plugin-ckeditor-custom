@@ -8,21 +8,6 @@
     "kind": "plugin",
     "displayName": "Rich text editor"
   },
-  "keywords": [
-    "strapi",
-    "ckeditor",
-    "ckeditor5",
-    "ckeditor 5",
-    "wysiwyg",
-    "rich text",
-    "editor"
-  ],
-  "files": [
-    "admin",
-    "server",
-    "strapi-admin.js",
-    "strapi-server.js"
-  ],
   "dependencies": {
     "@ckeditor/ckeditor5-alignment": "^36.0.0",
     "@ckeditor/ckeditor5-autoformat": "^36.0.0",
@@ -80,8 +65,6 @@
       "@semantic-release/github"
     ]
   },
-  "author": "CKSource (http://cksource.com/)",
-  "homepage": "https://market.strapi.io/plugins/@ckeditor-strapi-plugin-ckeditor",
   "engines": {
     "node": ">=14.19.1 <=18.x.x",
     "npm": ">=6.0.0"
