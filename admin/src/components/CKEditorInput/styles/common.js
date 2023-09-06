@@ -1,4 +1,4 @@
-import { css } from "styled-components";
+import { css } from 'styled-components';
 
 export const style = css`
   .ck {
@@ -44,8 +44,8 @@ export const style = css`
   }
 
   .ck-editor__main {
-    --ck-font-face: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    --ck-font-face: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+      'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--ck-color-editor-base-text);
     font-family: var(--ck-font-face);
     border: 0;
@@ -144,9 +144,7 @@ export const style = css`
       border-radius: 0;
     }
 
-    .ck.ck-content.ck-editor__editable.ck-focused:not(
-        .ck-editor__nested-editable
-      ) {
+    .ck.ck-content.ck-editor__editable.ck-focused:not(.ck-editor__nested-editable) {
       border-width: var(--ck-border-width);
       border-color: var(--ck-border-color);
       border-style: solid;

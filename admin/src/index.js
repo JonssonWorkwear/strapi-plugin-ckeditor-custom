@@ -1,11 +1,10 @@
-import { prefixPluginTranslations } from "@strapi/helper-plugin";
-import * as yup from "yup";
+import React from 'react';
+import styled from 'styled-components';
 
-import React from "react";
-import styled from "styled-components";
-import { Icon } from "@strapi/design-system/Icon";
-import { Flex } from "@strapi/design-system/Flex";
-import CKEditorIcon from "./CKEditorIcon";
+import { Icon } from '@strapi/design-system/Icon';
+import { Flex } from '@strapi/design-system/Flex';
+
+import CKEditorIcon from './CKEditorIcon';
 
 const IconBox = styled(Flex)`
   background-color: #f0f0ff; /* primary100 */
@@ -18,9 +17,9 @@ const IconBox = styled(Flex)`
 export default {
   register(app) {
     app.customFields.register({
-      name: "CKEditor",
-      type: "richtext",
-      pluginId: "ckeditor",
+      name: 'CKEditor',
+      type: 'richtext',
+      pluginId: 'ckeditor',
       icon: () => {
         return (
           <IconBox
@@ -36,97 +35,45 @@ export default {
         );
       },
       intlLabel: {
-        id: "ckeditor.label",
-        defaultMessage: "Rich text editor",
+        id: 'ckeditor.label',
+        defaultMessage: 'Rich text editor',
       },
       intlDescription: {
-        id: "ckeditor.description",
-        defaultMessage: "The CKEditor 5 rich text editor for Jonsson",
+        id: 'ckeditor.description',
+        defaultMessage: 'The CKEditor 5 rich text editor for Jonsson',
       },
       components: {
-        Input: async () => import("./components/CKEditorInput"),
+        Input: async () => import('./components/CKEditorInput'),
       },
       options: {
         base: [
           {
             intlLabel: {
-              id: "ckeditor.preset.label",
-              defaultMessage: "Choose editor version",
+              id: 'ckeditor.output.label',
+              defaultMessage: 'Choose output type',
             },
-            name: "options.preset",
-            type: "select",
-            defaultValue: "jonsson",
-            value: "jonsson",
+            name: 'options.output',
+            type: 'select',
+            defaultValue: 'Markdown',
+            value: 'Markdown',
             options: [
               {
-                key: "jonsson",
-                value: "jonsson",
+                key: 'html',
+                value: 'HTML',
                 metadatas: {
                   intlLabel: {
-                    id: "ckeditor.preset.jonsson.label",
-                    defaultMessage: "Jonsson version",
+                    id: 'ckeditor.output.html.label',
+                    defaultMessage: 'HTML',
                   },
                 },
               },
               {
-                key: "light",
-                value: "light",
+                key: 'markdown',
+                value: 'Markdown',
                 metadatas: {
                   intlLabel: {
-                    id: "ckeditor.preset.light.label",
-                    defaultMessage: "Light version",
-                  },
-                },
-              },
-              {
-                key: "standard",
-                value: "standard",
-                metadatas: {
-                  intlLabel: {
-                    id: "ckeditor.preset.standard.label",
-                    defaultMessage: "Standard version",
-                  },
-                },
-              },
-              {
-                key: "rich",
-                value: "rich",
-                metadatas: {
-                  intlLabel: {
-                    id: "ckeditor.preset.rich.label",
-                    defaultMessage: "Rich version",
-                  },
-                },
-              },
-            ],
-          },
-          {
-            intlLabel: {
-              id: "ckeditor.output.label",
-              defaultMessage: "Choose output type",
-            },
-            name: "options.output",
-            type: "select",
-            defaultValue: "Markdown",
-            value: "Markdown",
-            options: [
-              {
-                key: "html",
-                value: "HTML",
-                metadatas: {
-                  intlLabel: {
-                    id: "ckeditor.output.html.label",
-                    defaultMessage: "HTML",
-                  },
-                },
-              },
-              {
-                key: "markdown",
-                value: "Markdown",
-                metadatas: {
-                  intlLabel: {
-                    id: "ckeditor.output.markdown.label",
-                    defaultMessage: "Markdown",
+                    id: 'ckeditor.output.markdown.label',
+                    defaultMessage: 'Markdown',
                   },
                 },
               },
@@ -138,16 +85,15 @@ export default {
             sectionTitle: null,
             items: [
               {
-                name: "required",
-                type: "checkbox",
+                name: 'required',
+                type: 'checkbox',
                 intlLabel: {
-                  id: "ckeditor.required.label",
-                  defaultMessage: "Required field",
+                  id: 'ckeditor.required.label',
+                  defaultMessage: 'Required field',
                 },
                 description: {
-                  id: "ckeditor.required.description",
-                  defaultMessage:
-                    "You won't be able to create an entry if this field is empty",
+                  id: 'ckeditor.required.description',
+                  defaultMessage: "You won't be able to create an entry if this field is empty",
                 },
               },
               // Note: We can't call it simply "maxLength" because then Strapi
@@ -155,25 +101,20 @@ export default {
               // We want to apply this to the number of characters in the editor,
               // hence – a unique name.
               {
-                name: "options.maxLengthCharacters",
-                type: "checkbox-with-number-field",
+                name: 'options.maxLengthCharacters',
+                type: 'checkbox-with-number-field',
                 intlLabel: {
-                  id: "ckeditor.maxLength.label",
-                  defaultMessage: "Maximum length (characters)",
+                  id: 'ckeditor.maxLength.label',
+                  defaultMessage: 'Maximum length (characters)',
                 },
               },
             ],
           },
         ],
-        validator: (args) => ({
-          preset: yup.string().required({
-            id: "ckeditor.preset.error.required",
-            defaultMessage: "Editor preset is required",
-          }),
-        }),
       },
     });
   },
+
   async registerTrads({ locales }) {
     const importedTrads = await Promise.all(
       locales.map((locale) => {
