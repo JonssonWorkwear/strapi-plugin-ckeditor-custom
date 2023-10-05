@@ -9,7 +9,7 @@ This package provides a custom field for Strapi that lets us use and configure C
     <img src="https://github.com/JonssonWorkwear/strapi-plugin-ckeditor-custom/actions/workflows/release.yml/badge.svg?branch=release" alt="Release status">
   </a>
   <a href="https://www.npmjs.com/package/@jonssonworkwear/strapi-plugin-ckeditor-custom">
-    <img alt="npm (scoped)" src="https://img.shields.io/npm/v/%40jonssonworkwear/strapi-plugin-ckeditor-custom?logo=npm&label=%40jonssonworkwear%2Fstrapi-plugin-icon-picker&color=%234845F5">
+    <img alt="npm (scoped)" src="https://img.shields.io/npm/v/%40jonssonworkwear/strapi-plugin-ckeditor-custom?logo=npm&label=%40jonssonworkwear%2Fstrapi-plugin-ckeditor-custom&color=%234845F5">
   </a>
 </div>
 
@@ -28,7 +28,7 @@ To install this plugin simply run this command in the Strapi project:
 yarn add @jonssonworkwear/strapi-plugin-ckeditor-custom
 ```
 
-## ✨ Usage
+### Content-type builder 
 
 The plugin is made to be used instead of Strapi's default **Rich text field**. 
 
@@ -48,6 +48,17 @@ Inside a content-type, we can use the following schema:
   "customField": "plugin::ckeditor.CKEditor"
 }
 ```
+
+## ✨ Usage
+
+Start writing rich text content inside the custom editor. You will be able to use only the following formatting options:
+
+- Paragraphs
+- Headings – h2, h3, h4
+- Lists – unordered, ordered 
+- Links
+
+The plugin will export the content in Markdown format.
 
 ## 🪛 Development
 
