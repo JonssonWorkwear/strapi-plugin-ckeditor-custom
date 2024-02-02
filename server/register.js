@@ -6,4 +6,9 @@ module.exports = ({ strapi }) => {
     plugin: 'ckeditor',
     type: 'richtext',
   });
+  strapi.customFields.register({
+    name: 'CKTable',
+    plugin: 'ckeditor',
+    type: 'richtext',
+  });
 };
