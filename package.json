@@ -2,11 +2,21 @@
   "name": "@jonssonworkwear/strapi-plugin-ckeditor-custom",
   "version": "1.0.0",
   "description": "CKEditor 5 custom field for Strapi.",
-  "strapi": {
-    "name": "ckeditor",
-    "description": "The CKEditor 5 rich text editor for Jonsson",
-    "kind": "plugin",
-    "displayName": "Rich text editor"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonssonworkwear/strapi-plugin-ckeditor-custom.git"
+  },
+  "license": "MIT",
+  "release": {
+    "branches": [
+      "release"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ]
   },
   "dependencies": {
     "@ckeditor/ckeditor5-alignment": "^36.0.0",
@@ -47,27 +57,16 @@
   "peerDependencies": {
     "@strapi/strapi": "^4.12.5"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jonssonworkwear/strapi-plugin-ckeditor-custom.git"
+  "engines": {
+    "npm": ">=6.0.0"
   },
   "publishConfig": {
     "access": "public"
   },
-  "release": {
-    "branches": [
-      "release"
-    ],
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/npm",
-      "@semantic-release/github"
-    ]
-  },
-  "engines": {
-    "node": ">=14.19.1 <=18.x.x",
-    "npm": ">=6.0.0"
-  },
-  "license": "MIT"
+  "strapi": {
+    "name": "ckeditor",
+    "description": "The CKEditor 5 rich text editor for Jonsson",
+    "kind": "plugin",
+    "displayName": "Rich text editor"
+  }
 }
